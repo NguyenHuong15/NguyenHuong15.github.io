@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="remarket-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#27272a" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" fill="url(#remarket-bg)"/>
+
+  <!-- Mockup Browser Window -->
+  <rect x="50" y="40" width="500" height="280" rx="14" fill="#09090b" stroke="#3f3f46" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="50" y="40" width="500" height="36" rx="14" fill="#18181b"/>
+  <circle cx="75" cy="58" r="5" fill="#ef4444"/>
+  <circle cx="95" cy="58" r="5" fill="#f59e0b"/>
+  <circle cx="115" cy="58" r="5" fill="#10b981"/>
+  <rect x="150" y="49" width="300" height="18" rx="6" fill="#27272a"/>
+  <text x="300" y="62" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">https://remarket-antiques.vn</text>
+
+  <!-- Store Header in UI -->
+  <rect x="70" y="90" width="120" height="24" rx="4" fill="#3f3f46"/>
+  <text x="78" y="106" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="url(#gold-grad)">REMARKET</text>
+
+  <!-- Filter chips -->
+  <rect x="210" y="90" width="65" height="24" rx="12" fill="#d97706"/>
+  <text x="242" y="106" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Gốm sứ</text>
+  <rect x="285" y="90" width="65" height="24" rx="12" fill="#27272a"/>
+  <text x="317" y="106" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a1a1aa" text-anchor="middle">Đồng cổ</text>
+  <rect x="360" y="90" width="65" height="24" rx="12" fill="#27272a"/>
+  <text x="392" y="106" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a1a1aa" text-anchor="middle">Tranh xưa</text>
+
+  <!-- Cart badge -->
+  <circle cx="510" cy="102" r="14" fill="#27272a"/>
+  <circle cx="518" cy="94" r="7" fill="#ef4444"/>
+  <text x="518" y="98" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <path d="M504 105 L506 97 L516 97 L514 105 Z" fill="none" stroke="#d4d4d8" stroke-width="1.5"/>
+
+  <!-- Product Card 1: Antique Vase -->
+  <rect x="70" y="130" width="140" height="170" rx="10" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+  <!-- Vase Graphic -->
+  <rect x="80" y="140" width="120" height="85" rx="6" fill="#27272a"/>
+  <path d="M125 155 Q115 175 125 195 Q140 215 155 195 Q165 175 155 155 Z" fill="url(#gold-grad)"/>
+  <text x="80" y="243" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#f4f4f5">Bình Gốm Chu Đậu</text>
+  <text x="80" y="260" font-family="'Segoe UI', sans-serif" font-size="10" fill="#fbbf24">Thế kỷ XV • Độc bản</text>
+  <rect x="80" y="272" width="120" height="20" rx="4" fill="#ca8a04"/>
+  <text x="140" y="286" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Xem Chi Tiết</text>
+
+  <!-- Product Card 2: Vintage Clock -->
+  <rect x="230" y="130" width="140" height="170" rx="10" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+  <rect x="240" y="140" width="120" height="85" rx="6" fill="#27272a"/>
+  <circle cx="300" cy="182" r="28" fill="#52525b" stroke="#e4e4e7" stroke-width="2"/>
+  <line x1="300" y1="182" x2="300" y2="165" stroke="#ffffff" stroke-width="2"/>
+  <line x1="300" y1="182" x2="312" y2="182" stroke="#ffffff" stroke-width="2"/>
+  <text x="240" y="243" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#f4f4f5">Đồng Hồ ODO Pháp</text>
+  <text x="240" y="260" font-family="'Segoe UI', sans-serif" font-size="10" fill="#fbbf24">Năm 1930 • Máy cơ</text>
+  <rect x="240" y="272" width="120" height="20" rx="4" fill="#ca8a04"/>
+  <text x="300" y="286" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Xem Chi Tiết</text>
+
+  <!-- Feature Callout Card: Unique Item Locking Mechanism -->
+  <rect x="390" y="130" width="140" height="170" rx="10" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+  <circle cx="460" cy="170" r="24" fill="#4338ca"/>
+  <path d="M453 166 L453 162 C453 158 456 155 460 155 C464 155 467 158 467 162 L467 166 M450 166 L470 166 L470 178 L450 178 Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="460" y="210" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#c7d2fe" text-anchor="middle">Locking Mechanism</text>
+  <text x="460" y="230" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Xử lý tồn kho độc bản</text>
+  <text x="460" y="245" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Chống race condition</text>
+  <rect x="405" y="265" width="110" height="22" rx="4" fill="#4f46e5"/>
+  <text x="460" y="280" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Concurrency Safe</text>
+</svg>
+

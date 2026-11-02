@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gym-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" fill="url(#gym-bg)"/>
+
+  <!-- Gym App Frame -->
+  <rect x="50" y="40" width="500" height="280" rx="14" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  
+  <!-- App Header -->
+  <rect x="50" y="40" width="500" height="45" rx="14" fill="#27272a"/>
+  <circle cx="75" cy="62" r="5" fill="#ef4444"/>
+  <circle cx="92" cy="62" r="5" fill="#f59e0b"/>
+  <circle cx="109" cy="62" r="5" fill="#10b981"/>
+  <text x="135" y="67" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="900" fill="url(#orange-grad)">FITNESS PRO GYM</text>
+
+  <!-- Left Form Mockup -->
+  <rect x="75" y="105" width="220" height="195" rx="10" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+  <text x="90" y="130" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#f4f4f5">Đăng Ký Thành Viên</text>
+  
+  <rect x="90" y="142" width="190" height="24" rx="4" fill="#27272a"/>
+  <text x="100" y="158" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a1a1aa">Họ tên hội viên...</text>
+
+  <rect x="90" y="174" width="190" height="24" rx="4" fill="#27272a"/>
+  <text x="100" y="190" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a1a1aa">Gói tập: 6 Tháng Platinum</text>
+
+  <rect x="90" y="206" width="190" height="24" rx="4" fill="#27272a"/>
+  <text x="100" y="222" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a1a1aa">Chọn Huấn Luyện Viên (PT)</text>
+
+  <rect x="90" y="245" width="190" height="34" rx="6" fill="url(#orange-grad)"/>
+  <text x="185" y="267" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Xác Nhận &amp; Lưu Trữ</text>
+
+  <!-- Right: Dashboard & LocalStorage stats -->
+  <rect x="315" y="105" width="215" height="90" rx="10" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+  <text x="330" y="130" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">LocalStorage API Data</text>
+  <text x="330" y="152" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Quản lý danh sách thành viên</text>
+  <text x="330" y="172" font-family="'Segoe UI', sans-serif" font-size="10" fill="#10b981">● Trạng thái: Đồng bộ tức thì</text>
+
+  <rect x="315" y="210" width="215" height="90" rx="10" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+  <text x="330" y="235" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#f59e0b">Tính năng tương tác</text>
+  <text x="330" y="257" font-family="'Segoe UI', sans-serif" font-size="10" fill="#cbd5e1">✓ Tìm kiếm &amp; Lọc theo gói tập</text>
+  <text x="330" y="277" font-family="'Segoe UI', sans-serif" font-size="10" fill="#cbd5e1">✓ Xóa &amp; Sửa trực tiếp trên bảng</text>
+</svg>
+
