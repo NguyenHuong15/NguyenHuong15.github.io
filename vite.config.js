@@ -29,6 +29,7 @@ function serveStaticStartPage() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Portfolio/',
   plugins: [serveStaticStartPage(), react(), viteCompression(), generateSeoHtml()],
   server: {
     proxy: {
