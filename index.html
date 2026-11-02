@@ -3,58 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <script>
-    (function () {
-      const pathname = window.location.pathname;
-      const base = pathname.startsWith('/Portfolio') ? '/Portfolio/' : '/';
-      if (base !== '/') {
-        const rewrite = (url) => {
-          if (typeof url === 'string' && /^\/(textures|sounds|images|fonts|videos|favico)/.test(url)) {
-            return base + url.slice(1);
-          }
-          return url;
-        };
-
-        const origFetch = window.fetch;
-        window.fetch = function (input, init) {
-          if (typeof input === 'string') {
-            input = rewrite(input);
-          } else if (input instanceof Request) {
-            const newUrl = rewrite(input.url);
-            if (newUrl !== input.url) {
-              input = new Request(newUrl, input);
-            }
-          }
-          return origFetch.call(this, input, init);
-        };
-
-        const origOpen = XMLHttpRequest.prototype.open;
-        XMLHttpRequest.prototype.open = function (method, url, ...args) {
-          return origOpen.call(this, method, rewrite(url), ...args);
-        };
-
-        const desc = Object.getOwnPropertyDescriptor(Image.prototype, 'src');
-        if (desc && desc.set) {
-          Object.defineProperty(Image.prototype, 'src', {
-            set(value) {
-              return desc.set.call(this, rewrite(value));
-            },
-            get() {
-              return desc.get.call(this);
-            }
-          });
-        }
-
-        const OrigAudio = window.Audio;
-        window.Audio = function (src) {
-          return new OrigAudio(rewrite(src));
-        };
-      }
-    })();
-  </script>
-  <link rel="preload" as="image" href="/Portfolio/textures/paper-texture.webp" type="image/webp" fetchpriority="high" crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="/Portfolio/favico.png" />
-  <link rel="apple-touch-icon" href="/Portfolio/favico.png" />
+  <link rel="preload" as="image" href="/textures/paper-texture.webp" type="image/webp" fetchpriority="high" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/favico.png" />
+  <link rel="apple-touch-icon" href="/favico.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fafafa" />
 
@@ -74,7 +25,7 @@
   <meta property="og:description" content="Portfolio of Tomasz Szmajda (ITom) — creative developer building interactive websites with smooth animations, storytelling, and clean code. Award-winning." />
   <meta property="og:url" content="https://myhuong.dev/" />
   <meta property="og:site_name" content="Nguyễn Thị Mỹ Hương Portfolio" />
-  <meta property="og:image" content="/Portfolio/images/avatar.jpg" />
+  <meta property="og:image" content="/images/avatar.jpg" />
   <meta property="og:image:width" content="682" />
   <meta property="og:image:height" content="1024" />
   <meta property="og:locale" content="vi_VN" />
@@ -83,7 +34,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ITom – Award-Winning Creative Developer | Interactive Websites" />
   <meta name="twitter:description" content="Portfolio of Tomasz Szmajda (ITom) — creative developer building interactive websites with smooth animations, storytelling, and clean code. Award-winning." />
-  <meta name="twitter:image" content="/Portfolio/images/avatar.jpg" />
+  <meta name="twitter:image" content="/images/avatar.jpg" />
 
   <!-- Google Fonts: Hand-drawn + Primary -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,8 +57,8 @@
       border: 0 !important;
     }
   </style>
-  <script type="module" crossorigin src="/Portfolio/assets/index-B1uNGQJ2.js"></script>
-  <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DjjnQiee.css">
+  <script type="module" crossorigin src="/assets/index-D99W3WPw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BujjGa9j.css">
 
   <!-- Dynamic Structured Data (JSON-LD) — generated from Sanity at build time -->
   <script type="application/ld+json">
