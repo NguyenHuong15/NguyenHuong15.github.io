@@ -51,8 +51,7 @@ const PATH_TO_ROOM = {
  * Call this once at app startup to determine if we need to auto-teleport.
  */
 export function getInitialRoomFromUrl() {
-    const rawPath = window.location.pathname.replace(/\/+$/, '') || '/';
-    const path = rawPath.replace(/^\/Portfolio/, '') || '/';
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
     return PATH_TO_ROOM[path] !== undefined ? PATH_TO_ROOM[path] : null;
 }
 
@@ -93,14 +92,11 @@ export function useDocumentMeta() {
 
         // Push to browser history (only if not handling a popstate event and room actually changed)
         if (!isHandlingPopState.current && lastPushedRoom.current !== currentRoom) {
-            const base = window.location.pathname.startsWith('/Portfolio') ? '/Portfolio' : '';
-            const targetPath = meta.path === '/' ? (base ? `${base}/` : '/') : `${base}${meta.path}`;
-
             // Use replaceState for the very first load, pushState for subsequent navigations
             if (lastPushedRoom.current === undefined) {
-                window.history.replaceState({ room: currentRoom }, '', targetPath);
+                window.history.replaceState({ room: currentRoom }, '', meta.path);
             } else {
-                window.history.pushState({ room: currentRoom }, '', targetPath);
+                window.history.pushState({ room: currentRoom }, '', meta.path);
             }
             lastPushedRoom.current = currentRoom;
         }
@@ -112,12 +108,7 @@ export function useDocumentMeta() {
     useEffect(() => {
         const handlePopState = (event) => {
             isHandlingPopState.current = true;
-            let targetRoom = event.state?.room;
-            if (targetRoom === undefined) {
-                const rawPath = window.location.pathname.replace(/\/+$/, '') || '/';
-                const path = rawPath.replace(/^\/Portfolio/, '') || '/';
-                targetRoom = PATH_TO_ROOM[path] ?? null;
-            }
+            const targetRoom = event.state?.room ?? null;
             lastPushedRoom.current = targetRoom;
 
             if (targetRoom === null) {
