@@ -3,6 +3,55 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      const pathname = window.location.pathname;
+      const base = pathname.startsWith('/Portfolio') ? '/Portfolio/' : '/';
+      if (base !== '/') {
+        const rewrite = (url) => {
+          if (typeof url === 'string' && /^\/(textures|sounds|images|fonts|videos|favico)/.test(url)) {
+            return base + url.slice(1);
+          }
+          return url;
+        };
+
+        const origFetch = window.fetch;
+        window.fetch = function (input, init) {
+          if (typeof input === 'string') {
+            input = rewrite(input);
+          } else if (input instanceof Request) {
+            const newUrl = rewrite(input.url);
+            if (newUrl !== input.url) {
+              input = new Request(newUrl, input);
+            }
+          }
+          return origFetch.call(this, input, init);
+        };
+
+        const origOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function (method, url, ...args) {
+          return origOpen.call(this, method, rewrite(url), ...args);
+        };
+
+        const desc = Object.getOwnPropertyDescriptor(Image.prototype, 'src');
+        if (desc && desc.set) {
+          Object.defineProperty(Image.prototype, 'src', {
+            set(value) {
+              return desc.set.call(this, rewrite(value));
+            },
+            get() {
+              return desc.get.call(this);
+            }
+          });
+        }
+
+        const OrigAudio = window.Audio;
+        window.Audio = function (src) {
+          return new OrigAudio(rewrite(src));
+        };
+      }
+    })();
+  </script>
   <link rel="preload" as="image" href="/Portfolio/textures/paper-texture.webp" type="image/webp" fetchpriority="high" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="/Portfolio/favico.png" />
   <link rel="apple-touch-icon" href="/Portfolio/favico.png" />
@@ -57,7 +106,7 @@
       border: 0 !important;
     }
   </style>
-  <script type="module" crossorigin src="/Portfolio/assets/index-Cw-r3zOe.js"></script>
+  <script type="module" crossorigin src="/Portfolio/assets/index-B1uNGQJ2.js"></script>
   <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DjjnQiee.css">
 
   <!-- Dynamic Structured Data (JSON-LD) — generated from Sanity at build time -->
